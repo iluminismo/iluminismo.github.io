@@ -1,0 +1,44 @@
+var jsonLegends = '{"Carl Sagan":["Cientista","Maior divulgador científico do século 20.","https://upload.wikimedia.org/wikipedia/commons/b/be/Carl_Sagan_Planetary_Society.JPG"],"Stephen Hawking":["Físico teórico","É conhecido internacionalmente por sua contribuição à ciência, sendo um dos mais renomados cientistas do século.","https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/200px-Stephen_Hawking.StarChild.jpg"],"Charles Darwin":["Naturalista","Formulou a teoria da evolução das espécies, anteviu os mecanismos genéticos e fundou a biologia moderna.","https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Charles_Robert_Darwin_by_John_Collier.jpg/800px-Charles_Robert_Darwin_by_John_Collier.jpg"],"Isaac Asimov":["Escritor","Escritor e bioquímico e divulgador científico, considerado um dos mestres da Ficção Científica.","http://1.bp.blogspot.com/-6sVKGHDyuuQ/VoICV0pMXoI/AAAAAAAADpY/All4kTp8pt0/s1600/Isaac_Asimov_on_Throne.png"],"Richard Feynman":["Físico","Pioneiros da eletrodinâmica quântica e ficou conhecido pelos seus trabalhos no ramo da formulação integral da mecânica quântica.","https://www3.unicentro.br/petfisica/wp-content/uploads/sites/54/2018/09/fig1-19.jpg"],"Nikola Tesla":["Inventor","Responsável pela corrente alternada, que permite a eletricidade como a conhecemos.","https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Tesla_Sarony.jpg/200px-Tesla_Sarony.jpg"],"James Randi":["Mágico","Cético mais conhecido pelo seu desafio às alegações de sobrenaturalidade e pseudociência.","https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/RANDI.jpg/200px-RANDI.jpg"],"Ayn Rand":["Filósofa","Desenvolver um sistema filosófico chamado de Objetivismo","https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Ayn_Rand_by_Talbot_1943.jpg/220px-Ayn_Rand_by_Talbot_1943.jpg"]}';
+
+
+
+
+
+/*
+Stephen Hawking
+Físico teórico
+É conhecido internacionalmente por sua contribuição à ciência, sendo um dos mais renomados cientistas do século.
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/200px-Stephen_Hawking.StarChild.jpg
+
+Charles Darwin
+Naturalista
+Formulou a teoria da evolução das espécies, anteviu os mecanismos genéticos e fundou a biologia moderna.
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Charles_Robert_Darwin_by_John_Collier.jpg/800px-Charles_Robert_Darwin_by_John_Collier.jpg
+
+Isaac Asimov
+Escritor
+Escritor e bioquímico e divulgador científico, considerado um dos mestres da Ficção Científica.
+http://1.bp.blogspot.com/-6sVKGHDyuuQ/VoICV0pMXoI/AAAAAAAADpY/All4kTp8pt0/s1600/Isaac_Asimov_on_Throne.png
+
+Richard Feynman
+Físico
+Pioneiros da eletrodinâmica quântica e ficou conhecido pelos seus trabalhos no ramo da formulação integral da mecânica quântica.
+https://www3.unicentro.br/petfisica/wp-content/uploads/sites/54/2018/09/fig1-19.jpg
+
+Nikola Tesla
+Inventor
+Responsável pela corrente alternada, que permite a eletricidade como a conhecemos.
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Tesla_Sarony.jpg/200px-Tesla_Sarony.jpg
+
+James Randi
+Mágico
+Cético mais conhecido pelo seu desafio às alegações de sobrenaturalidade e pseudociência.
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/RANDI.jpg/200px-RANDI.jpg
+
+Ayn Rand
+Filósofa
+Desenvolver um sistema filosófico chamado de Objetivismo
+https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Ayn_Rand_by_Talbot_1943.jpg/220px-Ayn_Rand_by_Talbot_1943.jpg
+
+
+*/

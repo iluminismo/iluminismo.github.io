@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Iluminismo</title>
+    <meta name="description" content="cultura">
+    <meta name="keywords" content="iluminismo, conhecimenot">
+    <meta name="author" content="Bruno Régis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="rating" content="general" />
+
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600;800&family=Cormorant+Garamond:wght@300;500;700&family=Josefin+Sans:wght@200;400;700&family=Monsieur+La+Doulaise&family=Montserrat:wght@200;500;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/358755-200.png">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/posts.json"></script>
+    <script type="text/javascript" src="js/quote.json"></script>
+    <script type="text/javascript" src="js/categ.json"></script>
+    <script type="text/javascript" src="js/legends.json"></script>
+    <!-- qqwer-->
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="nav">
+                <ul class="navLeft">
+                    <li class="logo tab"><a href="#home">
+
+                            <svg class="svg-logo ssv" viewBox="0 2 72 68" fill="white" stroke="white">
+
+                                <path d="M72.397,56.092L45.819,12.324c-0.132-0.216-0.365-0.348-0.618-0.348H34.368h-0.002  c-0.064,0-0.126,0.009-0.187,0.025c-0.02,0.006-0.038,0.018-0.057,0.024c-0.04,0.014-0.08,0.027-0.115,0.049  c-0.021,0.011-0.037,0.027-0.055,0.041c-0.032,0.023-0.065,0.044-0.094,0.072c-0.017,0.017-0.029,0.04-0.045,0.059  c-0.022,0.027-0.047,0.052-0.066,0.083L7.602,56.096c-0.128,0.215-0.137,0.482-0.021,0.705l5.633,10.834  c0.123,0.232,0.361,0.381,0.625,0.389c0.006,0,0.012,0,0.017,0h52.436l0.017-0.01c0.017,0,0.032,0.01,0.051,0.01  c0.257,0,0.473-0.162,0.56-0.387l0.017-0.01l5.49-10.834l-0.003-0.004C72.534,56.568,72.526,56.305,72.397,56.092 M35.651,13.421  h9.144l25.701,42.323H31.084l4.449-7.586H55.19c0.26,0,0.5-0.139,0.628-0.365c0.129-0.227,0.125-0.506-0.009-0.729L35.643,13.421  H35.651z M36.138,46.715l3.208-5.703l3.656,5.703H36.138z M9.049,56.492l25.32-42.387l19.545,32.61h-9.196l-9.724-15.166  l-0.013-0.021H34.98l-0.005-0.008c-0.136-0.211-0.368-0.36-0.624-0.332c-0.252,0.006-0.483,0.143-0.609,0.36L13.89,65.801  L9.049,56.492z M65.848,66.578H15.108L32.027,37.39l2.363-4.077l4.007,6.438l-9.205,16.362l0.001,0.002  c-0.124,0.221-0.124,0.49,0.002,0.711c0.128,0.225,0.366,0.363,0.625,0.363h0.001h20.291h10.833h9.658L65.848,66.578z" />
+
+                            </svg>
+
+                        </a></li>
+                </ul>
+
+                <ul id="menu" class="navRight">
+
+                    <li><a href="#posts">
+
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M17.391,2.406H7.266c-0.232,0-0.422,0.19-0.422,0.422v3.797H3.047c-0.232,0-0.422,0.19-0.422,0.422v10.125c0,0.232,0.19,0.422,0.422,0.422h10.125c0.231,0,0.422-0.189,0.422-0.422v-3.797h3.797c0.232,0,0.422-0.19,0.422-0.422V2.828C17.812,2.596,17.623,2.406,17.391,2.406 M12.749,16.75h-9.28V7.469h3.375v5.484c0,0.231,0.19,0.422,0.422,0.422h5.483V16.75zM16.969,12.531H7.688V3.25h9.281V12.531z"></path>
+                            </svg>
+
+                        </a></li>
+                    <li><a href="#erudicao">
+
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"></path>
+                            </svg>
+
+                        </a></li>
+                    <li><a href="#art">
+
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M18.555,15.354V4.592c0-0.248-0.202-0.451-0.45-0.451H1.888c-0.248,0-0.451,0.203-0.451,0.451v10.808c0,0.559,0.751,0.451,0.451,0.451h16.217h0.005C18.793,15.851,18.478,14.814,18.555,15.354 M2.8,14.949l4.944-6.464l4.144,5.419c0.003,0.003,0.003,0.003,0.003,0.005l0.797,1.04H2.8z M13.822,14.949l-1.006-1.317l1.689-2.218l2.688,3.535H13.822z M17.654,14.064l-2.791-3.666c-0.181-0.237-0.535-0.237-0.716,0l-1.899,2.493l-4.146-5.42c-0.18-0.237-0.536-0.237-0.716,0l-5.047,6.598V5.042h15.316V14.064z M12.474,6.393c-0.869,0-1.577,0.707-1.577,1.576s0.708,1.576,1.577,1.576s1.577-0.707,1.577-1.576S13.343,6.393,12.474,6.393 M12.474,8.645c-0.371,0-0.676-0.304-0.676-0.676s0.305-0.676,0.676-0.676c0.372,0,0.676,0.304,0.676,0.676S12.846,8.645,12.474,8.645"></path>
+                            </svg>
+
+                        </a></li>
+                    <li><a href="#lendas">
+
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M15.94,10.179l-2.437-0.325l1.62-7.379c0.047-0.235-0.132-0.458-0.372-0.458H5.25c-0.241,0-0.42,0.223-0.373,0.458l1.634,7.376L4.06,10.179c-0.312,0.041-0.446,0.425-0.214,0.649l2.864,2.759l-0.724,3.947c-0.058,0.315,0.277,0.554,0.559,0.401l3.457-1.916l3.456,1.916c-0.419-0.238,0.56,0.439,0.56-0.401l-0.725-3.947l2.863-2.759C16.388,10.604,16.254,10.22,15.94,10.179M10.381,2.778h3.902l-1.536,6.977L12.036,9.66l-1.655-3.546V2.778z M5.717,2.778h3.903v3.335L7.965,9.66L7.268,9.753L5.717,2.778zM12.618,13.182c-0.092,0.088-0.134,0.217-0.11,0.343l0.615,3.356l-2.938-1.629c-0.057-0.03-0.122-0.048-0.184-0.048c-0.063,0-0.128,0.018-0.185,0.048l-2.938,1.629l0.616-3.356c0.022-0.126-0.019-0.255-0.11-0.343l-2.441-2.354l3.329-0.441c0.128-0.017,0.24-0.099,0.295-0.215l1.435-3.073l1.435,3.073c0.055,0.116,0.167,0.198,0.294,0.215l3.329,0.441L12.618,13.182z"></path>
+                            </svg>
+
+                        </a></li>
+                    <li>
+
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                            <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
+                        </svg>
+
+                    </li>
+                </ul>
+            </div>
+            <div id="folder" class="tab-folder">
+                <div id="erudicao" class="tab-content">
+                    <h1>Erudição</h1>
+                    <h3>YouTube audiobooks</h3>
+
+                    <a href="https://www.youtube.com/watch?v=bE6cnQMoLOQ">O MUNDO ASSOMBRADO PELOS DEMÔNIOS</a><br>
+                    <a href="https://www.youtube.com/watch?v=jN73sL36M7U">Sapiens - Uma Breve História da Humanidade</a><br>
+                    <a href="https://www.youtube.com/watch?v=ycffTxj-398">O Gene Egoísta parte 1 </a>-<a href="https://www.youtube.com/watch?v=wvd1PZOHa3I"> Parte 2 </a>-<a href="https://www.youtube.com/watch?v=F6puhMy0DtM"> Parte 3</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=G9l8X-mXv2U&list=RDCMUCSPSZUPOQirLaXHdlGXGS7Q&index=1">O Poder do Hábito parte 1</a> -
+                    <a href="https://www.youtube.com/watch?v=QoI04aIHWtA&list=RDCMUCSPSZUPOQirLaXHdlGXGS7Q&index=2">Parte 2</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=MN5Jk_G1IA0">Como Fazer Amigos e Influenciar Pessoas</a>
+                    <h3>Livros</h3>
+                    <a href="">Guia Prático da Auto-suficiência
+                        John Seymour</a>
+
+
+                    <h4>Libertarianismo</h4>
+
+                    <ul>
+                        <li>The Beautiful Tree</li>
+                        <li>The Bitcoin Standard</li>
+                    </ul>
+
+                    <h4>Ciência</h4>
+                    <a href="http://scienceblogs.com.br/rainha/bibliografia-do-nerdologia/">Bibliografia</a>
+                    <ul>
+                        <li>How smart machines think</li>
+                    </ul>
+
+                    <h3>YouTube</h3>
+                    
+                    <div class="more">
+    <input type="checkbox" id="Ypolitica" />
+    <label for="Ypolitica">Libertarianismo/Politica</label>
+    <span>
+                    <p>
+                        <a href="https://www.youtube.com/channel/UCSyG9ph5BJSmPRyzc_eGC4g">Visão Libertária</a>
+                    </p>
+                    <p><a href="https://www.youtube.com/channel/UC-NwgkrLPYmzM-xoLr2GX-Q">Ideias Radicais</a></p>
+                    <p><a href="https://www.youtube.com/channel/UC-nr9CZ9LglgqMOqSSlzytg">Daniel Fraga</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UCittVh8imKanO_5KohzDbpg">Paul Joseph Watson</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCSFy-1JrpZf0tFlRZfo-Rvw">Sydney Watson</a></p>
+        
+    </span>
+</div>
+                    
+               <div class="more">
+    <input type="checkbox" id="Yciencia" />
+    <label for="Yciencia">Ciência</label>
+    <span>
+
+        <p>
+                        <a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q">In a Nutshell</a>
+                    </p>
+                    <p><a href="https://www.youtube.com/c/Thunderf00t/videos">Thunderf00t</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UCm8vDgeJCiFkVbq693stYjA">Efarsas</a></p>
+        
+    </span>
+</div>     
+                   
+                   <div class="more">
+    <input type="checkbox" id="Ysobrevivencialismo" />
+    <label for="Ysobrevivencialismo">Sobrevivencialismo</label>
+    <span>
+
+        <p>
+                        <a href="https://www.youtube.com/channel/UClQfWNWk9UsUj317ce5FtXg">Sobrevivencialismo</a>
+                    </p>
+                    <p><a href="https://www.youtube.com/channel/UC2bWVm4BwRM2vK8y6vldhlQ">KRAV MAGA CAVEIRA</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCm9K6rby98W8JigLoZOh6FQ">LockPickingLawyer</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UC6QH13V2o68zynSa0hZy9uQ">Paul Harrell</a></p>
+
+
+                    <p><a href="https://www.youtube.com/channel/UCX1ztT76CZfs29aGK9Nn7_A">Corporals Corner</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCc-0YpRpqgA5lPTpSQ5uo-Q">Audit the Audit</a></p>
+        
+    </span>
+</div>
+                   
+                   <div class="more">
+    <input type="checkbox" id="Economia" />
+    <label for="Economia">Empreendedorismo/Economia</label>
+    <span>
+
+        <p><a href="https://www.youtube.com/channel/UCT4nDeU5pv1XIGySbSK-GgA">O Primo Rico</a></p>
+        
+    </span>
+</div>
+
+          
+                    <h4>Hobbies</h4>
+                    <p><a href="https://www.youtube.com/channel/UCt2HZgNN6ycWlaOMpnoZFcw">ABC do Bonsai</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCh7TUTXojlE8vRtb-EnuDzw">Metaforando</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCEQXp_fcqwPcqrzNtWJ1w9w">Arte vetorial</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCYnIfvhDpm_kOrRstVezRYQ">Casual Gamers</a></p>
+                    <p><a href="https://www.youtube.com/channel/UC1szFCBUWXY3ESff8dJjjzw">Cybersecurity</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UC70YG2WHVxlOJRng4v-CIFQ">Gabriel Pato</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UCUQo7nzH1sXVpzL92VesANw">DIY Perks</a></p>
+
+
+                    <p><a href="https://www.youtube.com/channel/UCi7NjYyIQk6hPRbZ4BVKHyw">FlatOut Brasil </a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UC3ICcukYYeSn26KlCRnhOhA">Origami</a></p>
+                    <p><a href="https://www.youtube.com/user/PalavraNerd">Brush Rush</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UCONd1SNf3_QqjzjCVsURNuA">AntsCanada</a></p>
+                    <p><a href="https://www.youtube.com/channel/UC3IeH8JL4fJFCLfd4Qj7q4A">Piscina natural</a></p>
+
+                    <p><a href="https://www.youtube.com/channel/UCfOrKQtC1tDfGf_fFVb8pYw">Repado de eletronicos</a></p>
+
+
+                    <p><a href="https://www.youtube.com/channel/UCoNTMWgGuXtGPLv9UeJZwBw"></a>Arquitetura</p>
+
+
+
+<h3>Videos Importantes</h3>
+                    <p><a href="https://www.youtube.com/watch?v=YvacVb5It9Q&list=LL9pOgjpHqEqt5ZPjQ9xP3Kg&index=48&t=0s">Básico sobre defesa pessoal</a></p>
+                    
+                    
+                    
+
+                </div>
+                <div id="art" class="tab-content">
+
+
+                    <h1>Art</h1>
+
+                    <h3>Porque a belaza importa?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bHw4MMEnmpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>art nao e mais pura tecnica, porque atualmente alem de termos fotografias que se tornaram uma forma de art, temos tecnologia e precisao para criar a obra praticamente idistiguivel a uma foto. </p>
+                    <p>O foco ta arte e a criatividade, passar um sentimento em uma imagem, na forma de um ambiente.</p>
+
+
+
+
+                    <h1>Filmes</h1>
+
+                    <a href="https://www.imdb.com/chart/top?ref_=nv_mv_250">IMDB TOP 250 Filmes</a>
+
+                    <h1>Series</h1>
+
+                    <a href="https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250">IMDB TOP 250 Series</a>
+
+                    <h1>Musica</h1>
+                    Não consegui encontrar nenhum site de hating de musica minimamente confiavel, entao disponibilizei alguns musicos que tem algum comprometimento com qualidade.
+
+                    <div class="more">
+                        <input type="checkbox" id="musics" />
+                        <label for="musics">Minha escolha</label>
+                        <span>
+
+                            <h4>Musica erudita</h4>
+
+                            <ul>
+                                <li>Debussy</li>
+                                <li>Erik Satie</li>
+                                <li>Chopin</li>
+                                <li>Mozart</li>
+                                <li>Beethoven</li>
+                                <li>Bach - Glenn gould</li>
+                            </ul>
+
+                            <h4>Bandas de rock</h4>
+
+                            <ul>
+                                <li>Simon &amp; Garfunkel</li>
+                                <li>AC DC</li>
+                                <li>Black Sabbath</li>
+                                <li>Bob Dylan</li>
+                                <li>Boston</li>
+                                <li>IRON MAIDEN</li>
+                                <li>Kansas</li>
+                                <li>King Crimson</li>
+                                <li>Led Zeppelin</li>
+                                <li>Metallica</li>
+                                <li>Pearl Jam</li>
+                                <li>Pink Floyd</li>
+                                <li>Queen</li>
+                                <li>Radiohead</li>
+                                <li>Rush</li>
+                                <li>Van Halen</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <h1>Games</h1>
+                    <a href="https://www.accursedfarms.com/games/">Lista de accursedfarms</a>
+
+                    <p>A capacidade do subconsite de criar obras, paralizia do sono </p>
+
+                    <div class="more">
+                        <input type="checkbox" id="Devil" />
+                        <label for="Devil">Tartini Violin Sonata in G minor ''Devil's Trill Sonata''</label>
+                        <span>
+
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z7rxl5KsPjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </span>
+                    </div>
+
+                    <p>junção de culturas, proporcionada pela globalização e a internet </p>
+                    <a href="https://www.youtube.com/watch?v=HUVtoWIeyp8">ESPERAR PRA VER | Lupin III (ルパン三世 カリオストロの城)</a>
+
+                    <br>
+                    <p>É etico apreciar uma obra com tamanha crueldade em volta?</p>
+                    <div class="more">
+                        <input type="checkbox" id="Jesu" />
+                        <label for="Jesu">Alessandro Moreschi -1 and Philippe Jaroussky "Pie Jesu" soprano & countertenor (Leybach and Fauré) Requiem</label>
+                        <span>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nukZS61W8f4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </span>
+                    </div>
+
+                    <a href="https://www.youtube.com/watch?v=nukZS61W8f4"></a>
+                </div>
+                <div id="lendas" class="tab-content">
+                    <h1>Legends</h1>
+                    <h3>Pessoas que encontraram a imortalidade em suas obras</h3>
+                    voec pode conhecer as pessoas mais inteligentes que ja existiram atravez das obras que elas deixaram em vida.
+                    <ul id="legendsContent">
+
+                    </ul>
+                    <h1>Lista externas</h1>
+                    <a href="https://www.scienceheroes.com/index.php?option=com_content&view=article&id=258&Itemid=27">Cientistas que salvaram bilhoes de vidas</a><br>
+                    <a href="https://en.wikipedia.org/wiki/List_of_secular_humanists">Lista de humanistas</a><br>
+                    <a href="http://faculty.washington.edu/jhannah/geog270aut07/readings/GreenGeneRevolutions/Easterbrook%20-%20ForgottenBenefactor.pdf">Forgotten Benefactor of Humanity</a><br>
+                </div>
+                <div id="posts" class="tab-content">
+                    <h1>Posts</h1>
+                    <div id="categ">
+                    </div>
+                    <div id="linkPosts"></div>
+                </div>
+                <div id="home" class="tab-content">
+                    <div class="homeItens">
+                        <div>
+                            <div class="test"></div>
+                            <svg class="light" viewBox="0 0 200 200" width="50%">
+                                <path fill="white" stroke="white" stroke-width="1" d="M 144.62,122.06
+           C 144.62,122.06 88.88,121.94 88.88,121.94
+             88.88,121.94 77.64,141.18 77.64,141.18
+             77.64,141.18 180.66,141.03 180.66,141.03
+             180.66,141.03 113.03,30.03 113.03,30.03
+             113.03,30.03 89.03,29.97 89.03,29.97
+             89.03,29.97 144.62,122.06 144.62,122.06 Z
+           M 85.53,31.94
+           C 85.53,31.94 18.70,143.52 18.70,143.52
+             18.70,143.52 31.48,168.00 31.48,168.00
+             31.48,168.00 85.55,74.55 85.55,74.55
+             85.55,74.55 113.17,117.17 113.17,117.17
+             113.17,117.17 130.51,117.00 136.00,117.00
+             136.00,117.00 85.53,31.94 85.53,31.94 Z
+           M 85.59,82.91
+           C 85.59,82.91 35.00,169.97 35.00,169.97
+             35.00,169.97 168.39,169.96 168.39,169.96
+             168.39,169.96 180.48,146.04 180.48,146.04
+             180.48,146.04 69.55,146.00 69.55,146.00
+             69.55,146.00 96.22,99.41 96.22,99.41
+             96.22,99.41 85.59,82.91 85.59,82.91 Z" />
+                            </svg>
+
+                            <p style="max-width: 800px;display: inline-block">O movimento iluminismo foi responsável pelo desenvolvimento cientifico, politico filosófico dos últimos seculos. Nosso objetivo é expandir em cima desse legado, tomando como base suais ideias iniciais de razão, questionamento, progresso, liberdade e leis naturais. Focando nos indivíduos e seu desenvolvimento para a melhora da sociedade.</p>
+
+                            <hr>
+                            <h2>Objetivos</h2>
+
+                            <ul>
+                                <li>Analisar argumentos</li>
+                                <li>Compartilhar o conhecimento</li>
+                                <li>Realizar projetos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="homeItens">
+                        <div>
+                            <h1>Princípios fundamentais</h1>
+                            <h3>Tenha um propósito que busque o progresso humano.</h3>
+                            <h3>Esteja atento e preparado para qualquer acontecimento.</h3>
+                            <h3>Viva a realidade explorando e questionando o conhecimento.</h3>
+                            <h3>Evite violência e sofrimento cometidos a você ou outros.</h3>
+                            <h3>Seja capaz de resolver conflitos de forma eficiente.</h3>
+                            <h3>Compartilhe suas ideias.</h3>
+                            <h3>Gaste seu tempo com tarefas e pessoas que lhe darão resultados.</h3>
+                            <h3>Desenvolva hábitos que busque eficiência, saúde física e emocional.</h3>
+                            <h3>Crie valor.</h3>
+                            <h3>Evite riscos desnecessários.</h3>
+                            <h3>Valorize a qualidade e beleza.</h3>
+                            <h3><a href="#Principios_fundamentais">Leia mais</a></h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="line">
+                <svg width="7.7959099mm" height="8.6931572mm" viewBox="0 0 7.7959098 8.6931572">
+                    <defs id="defs981" />
+                    <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="256" inkscape:cx="30.138144" inkscape:cy="9.513672" inkscape:document-units="mm" inkscape:current-layer="layer1" showgrid="false" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="-8" inkscape:window-y="32" inkscape:window-maximized="1" />
+                    <metadata id="metadata984">
+                        <rdf:RDF>
+                            <cc:Work rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title />
+                            </cc:Work>
+                        </rdf:RDF>
+                    </metadata>
+                    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(111.80514,18.798955)">
+                        <path d="m -106.93513,-12.767508 c -0.0123,0.44062 -0.34961,0.81139 -0.21661,1.17933 0.06,0.16546 0.42969,0.3101 0.53234,-0.018 0.0882,-0.28222 -0.1404,-0.33196 -0.13899,-1.16134 -10e-4,-0.83009 0.22719,-0.87947 0.13899,-1.16134 -0.10265,-0.32879 -0.47237,-0.1838 -0.53234,-0.0183 -0.133,0.36759 0.20426,0.73836 0.21661,1.17968 z m -1.149,-0.33161 c -1.11337,0 -1.48555,-1.06751 -1.2005,-1.53423 0.27411,-0.44874 0.58279,-0.32809 1.16275,-0.35666 0.37959,-0.0191 0.62124,-0.26847 0.61595,-0.19368 -0.0381,0.54434 -0.63606,0.61419 -0.88194,0.95356 -0.508,0.70274 0.74118,0.93204 0.85266,0.70944 0.0734,-0.1464 0.7867,0.42157 -0.54892,0.42157 z m 0,0.66322 c -1.11337,0 -1.48555,1.06715 -1.2005,1.53423 0.27411,0.44873 0.58279,0.32738 1.16275,0.35666 0.37959,0.0183 0.62124,0.26811 0.61595,0.19332 -0.0381,-0.54469 -0.63606,-0.61383 -0.88194,-0.95356 -0.508,-0.70203 0.74118,-0.93168 0.85266,-0.70979 0.0734,0.14711 0.7867,-0.42086 -0.54892,-0.42086 z m 0.92957,-0.0254 c 0.0441,-0.0501 0.0716,-0.17533 0.0755,-0.30621 -0.004,-0.13124 -0.0314,-0.25612 -0.0755,-0.30657 -0.0529,-0.0596 -0.62442,0.37783 -1.51553,0.16122 -0.48719,-0.11782 -0.70944,-0.47307 -1.12854,-0.64417 -0.5588,-0.22895 -1.19627,0.30022 -0.89323,0.30022 0.24306,0 0.23636,0.18591 0.0843,0.12805 -0.63182,-0.23777 -0.86819,0.19791 -1.17087,0.33303 -0.0173,0.007 -0.0258,0.0166 -0.0272,0.0282 10e-4,0.0113 0.01,0.0205 0.0272,0.0286 0.30268,0.1344 0.53905,0.57009 1.17087,0.33231 0.15205,-0.0571 0.15875,0.12841 -0.0843,0.12841 -0.30304,0 0.33443,0.52917 0.89323,0.29987 0.4191,-0.17145 0.64135,-0.526 1.12854,-0.64382 0.89111,-0.21661 1.46261,0.22083 1.51553,0.16086 z m 1.58044,-0.63782 c 2.19534,-7.2e-4 1.38148,-1.43334 0.79411,-1.08021 -0.30939,0.18697 -0.13829,0.51894 0.13088,0.40852 0.0406,-0.0162 0.10407,-0.0801 0.0776,-0.0194 -0.0677,0.15663 -0.21908,0.12912 -0.24165,0.15804 -0.004,0.004 -0.004,0.01 -0.002,0.0162 0.061,0.17004 0.28222,-0.0349 0.23812,0.0332 -0.2473,0.38488 -2.5721,0.48366 -0.99731,0.48366 z m 0,0.66322 c 2.19534,3.4e-4 1.38148,1.43298 0.79411,1.07915 -0.30939,-0.18556 -0.13829,-0.51753 0.13017,-0.40746 0.0413,0.0162 0.10478,0.0801 0.0783,0.0191 -0.0677,-0.15734 -0.21908,-0.12877 -0.24165,-0.15805 -0.004,-0.004 -0.004,-0.01 -0.002,-0.0159 0.061,-0.17039 0.28222,0.0349 0.23812,-0.0328 -0.2473,-0.38594 -2.5721,-0.48471 -0.99731,-0.48401 z m -0.83255,-0.9906 c 0.26811,-0.19332 0.75247,-0.10548 0.76694,-0.84102 0.008,-0.3997 -0.5334,-0.72355 -0.70203,-0.31221 -0.0861,0.2092 0.17462,0.38312 0.27587,0.23495 0.0152,-0.0222 0.0201,-0.0818 0.0346,-0.0339 0.0385,0.12347 -0.0624,0.1464 -0.0607,0.17215 0,0.004 0.002,0.007 0.007,0.0113 0.11818,0.0963 0.14428,-0.1016 0.1524,-0.0444 0.0423,0.28928 -0.45403,0.16263 -0.58562,0.85867 -0.0303,0.16404 0.0416,0.005 0.11148,-0.0455 z m -0.17498,0.47449 2.57916,-0.001 0.001,0.367606 -2.58073,0.0021 c -0.0159,-0.11289 -0.0131,-0.29351 0,-0.36865 z m 0.17498,0.84313 c 0.26811,0.19368 0.75247,0.10548 0.76694,0.84103 0.008,0.40005 -0.5334,0.72354 -0.70203,0.31256 -0.0861,-0.20955 0.17462,-0.38382 0.27587,-0.23601 0.0152,0.0226 0.0201,0.0829 0.0346,0.0346 0.0385,-0.12312 -0.0624,-0.1464 -0.0607,-0.17216 0,-0.003 0.002,-0.007 0.007,-0.0113 0.11818,-0.0963 0.14428,0.1016 0.1524,0.0444 0.0423,-0.28892 -0.45403,-0.16333 -0.58562,-0.85866 -0.0303,-0.16369 0.0416,-0.005 0.11148,0.0455 z" sodipodi:nodetypes="ccccccccscccccsscccccscccccscccccscccccccccccccccccccccccccccccccccccccccccaccccccc" />
+                    </g>
+                </svg><svg class="line-extend" width="3.0082247mm" height="8.6931553mm" viewBox="0 0 3.0082247 8.6931553" preserveAspectRatio="none">
+
+                    <rect id="rect8" width="3.0217001" height="0.368653" x="-0.0016682709" y="5.8469343" style="stroke-width:0.2656554" />
+                </svg><svg width="16.532467mm" height="8.6931562mm" viewBox="0 0 16.532467 8.6931562">
+
+                    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-213.22897,-91.570089)">
+                        <g transform="translate(-90.71838,74.839286)" id="layer1-4" inkscape:label="Layer 1">
+                            <g inkscape:label="Layer 1" id="layer1-0" transform="translate(371.24279,92.226186)">
+                                <path d="m -59.598807,-70.916329 c 0,-1.369836 -1.82386,-1.827742 -2.621843,-1.477433 -0.76694,0.338314 -0.560211,0.717903 -0.609249,1.431925 -0.03281,0.466372 -0.46002,0.764116 -0.331258,0.757766 0.930982,-0.04692 1.050221,-0.783872 1.63054,-1.085497 1.200502,-0.625122 1.591733,0.912989 1.212143,1.049514 -0.249766,0.08996 0.719667,0.968022 0.719667,-0.676275 z m -3.276245,2.736497 c -0.357013,-0.299155 -0.281165,-0.922161 -1.497542,-0.802216 -0.661458,0.06526 -1.118658,0.804686 -0.41628,0.938741 0.358775,0.06773 0.608542,-0.291747 0.349605,-0.390172 -0.03846,-0.01482 -0.138996,-0.0099 -0.06138,-0.03739 0.198612,-0.07091 0.250825,0.05009 0.292803,0.0441 0.0056,-7.14e-4 0.01199,-0.0042 0.01834,-0.01129 0.141455,-0.166158 -0.189449,-0.161572 -0.09596,-0.182386 0.471664,-0.107245 0.335139,0.537986 1.501775,0.5715 0.275518,0.0078 0.0028,-0.05186 -0.09137,-0.130881 z m -1.093613,-1.745544 c -0.191559,0 -0.309034,-0.09772 -0.426154,-0.20567 -0.40499,-0.376413 -0.534813,-0.380294 -0.506942,-0.41275 0.02787,-0.03351 0.195437,-0.01976 0.329142,3.44e-4 0.572204,0.0889 1.053394,-0.431447 1.19521,-0.656166 0.04657,-0.0755 2.65e-4,1.274233 -0.591256,1.274233 z m 2.662063,-3.037064 c -0.42263,0.01376 -0.902759,0.152047 -1.271765,-0.5842 -0.240242,-0.479425 0.303035,-1.166283 0.765175,-0.761294 0.235656,0.206375 -0.01622,0.559858 -0.23636,0.435327 -0.03316,-0.0187 -0.07444,-0.08925 -0.06668,-0.02258 0.01976,0.169687 0.16792,0.143228 0.180975,0.174625 0.0021,0.0042 0.0013,0.01058 -0.0032,0.01799 -0.104072,0.180623 -0.252238,-0.0441 -0.230365,0.02893 0.08537,0.294217 0.489302,0.07549 0.917223,0.372181 0.331258,0.230717 0.500592,0.523169 0.462137,0.502355 -0.215515,-0.114653 -0.411662,-0.167216 -0.51714,-0.163336 z m -4.002972,3.037064 c -3.020835,-0.0018 -1.902176,-1.972733 -1.09361,-1.486253 0.42545,0.256117 0.190852,0.713317 -0.180268,0.561975 -0.05574,-0.02293 -0.14323,-0.110772 -0.106188,-0.02681 0.09384,0.2159 0.300921,0.177094 0.332671,0.216958 0.0042,0.006 0.0049,0.01341 0.0019,0.02293 -0.08325,0.233186 -0.38735,-0.04868 -0.328083,0.04445 0.340783,0.530225 3.539421,0.66675 1.373716,0.66675 z m 6.278034,0.820561 c 0.403579,0.01588 0.9017,0.251178 0.898879,0.59443 -0.0024,0.365478 0.612775,0.599017 0.582436,0.621595 -0.223661,0.170039 -0.77964,0.05221 -0.804334,-0.0829 -0.0039,-0.02117 -0.06879,0.118181 0.05045,0.242711 0.479425,0.503061 -0.462139,0.403225 -0.653698,0.849842 -0.01728,0.03986 -0.03986,0.07479 -0.07373,0.07691 -0.03281,-0.0021 -0.05539,-0.03704 -0.07232,-0.07691 -0.191558,-0.446617 -1.133475,-0.346781 -0.65405,-0.849842 0.118885,-0.12453 0.05398,-0.263878 0.0508,-0.242711 -0.0254,0.135114 -0.581025,0.252942 -0.803981,0.0829 -0.03104,-0.02258 0.5842,-0.256117 0.581025,-0.621595 -0.0028,-0.343252 0.496358,-0.578555 0.898525,-0.59443 z m 1.126773,0.253647 c 0.329848,0.329495 0.180268,0.925689 1.437568,0.944033 0.683684,0.0099 1.236488,-0.657225 0.534459,-0.864658 -0.358421,-0.10548 -0.656519,0.216253 -0.402519,0.340078 0.0381,0.01834 0.140759,0.02469 0.05856,0.04233 -0.211312,0.04692 -0.250118,-0.0762 -0.294216,-0.07514 -0.0074,3.44e-4 -0.01304,0.0035 -0.01976,0.0092 -0.164396,0.145345 0.173919,0.178153 0.0762,0.188031 -0.494241,0.05151 -0.2794,-0.559506 -1.467908,-0.720372 -0.280458,-0.03845 -0.0099,0.05009 0.07761,0.136525 z m -1.126773,-0.650522 c 0.75424,-0.01552 1.387829,-0.430389 2.01789,-0.265642 0.281516,0.07303 0.528108,0.528461 -0.0321,0.654756 -0.48225,0.108655 -0.566917,-0.172861 -1.98579,-0.172509 -1.417812,-3.43e-4 -1.502479,0.281164 -1.984375,0.172509 -0.560917,-0.126295 -0.313971,-0.581731 -0.03175,-0.654756 0.629356,-0.164747 1.262591,0.25012 2.016125,0.265642 z m 0.567973,-1.414639 c 0,-1.369836 1.824918,-1.827742 2.622198,-1.477433 0.766585,0.338314 0.56021,0.717903 0.609952,1.431925 0.0321,0.466372 0.458965,0.764116 0.3302,0.757766 -0.930982,-0.04692 -1.049867,-0.783872 -1.629833,-1.085497 -1.200857,-0.625122 -1.592086,0.912989 -1.21285,1.049514 0.250825,0.08996 -0.719667,0.968022 -0.719667,-0.676275 z m -0.0441,1.144411 c -0.08573,0.05397 -0.299154,0.08749 -0.523875,0.09243 -0.22366,-0.0049 -0.437092,-0.03845 -0.523169,-0.09243 -0.10195,-0.06491 0.645234,-0.76835 0.274817,-1.865136 -0.20038,-0.598664 -0.807863,-0.873125 -1.100315,-1.387828 -0.391935,-0.688269 0.513644,-1.472494 0.513644,-1.099608 0,0.29845 0.316441,0.291042 0.218723,0.103717 -0.407458,-0.777522 0.337256,-1.068564 0.568677,-1.44145 0.01236,-0.02081 0.02928,-0.0314 0.04763,-0.03316 0.01939,0.0018 0.03598,0.01235 0.04868,0.03316 0.231423,0.372886 0.976138,0.663928 0.569032,1.44145 -0.09843,0.187325 0.218368,0.194733 0.218368,-0.103717 0,-0.372886 0.905582,0.411339 0.513646,1.099608 -0.292806,0.514703 -0.899938,0.789164 -1.100666,1.387828 -0.369359,1.096786 0.376766,1.800225 0.274812,1.865136 z m 3.319991,1.592086 c 0.357365,-0.299155 0.281517,-0.922161 1.497897,-0.802216 0.66181,0.06526 1.11901,0.804686 0.416277,0.938741 -0.358424,0.06773 -0.60819,-0.291747 -0.349602,-0.390172 0.0388,-0.01482 0.139345,-0.0099 0.06138,-0.03739 -0.198263,-0.07091 -0.250121,0.05009 -0.292806,0.0441 -0.006,-7.14e-4 -0.01164,-0.0042 -0.01765,-0.01129 -0.141462,-0.166158 0.18909,-0.161572 0.0956,-0.182386 -0.471664,-0.107244 -0.335491,0.537986 -1.501775,0.5715 -0.275166,0.0078 -0.0028,-0.05186 0.09066,-0.130881 z m 1.094672,-1.745544 c 0.191558,0 0.309033,-0.09772 0.425802,-0.20567 0.404989,-0.376413 0.53481,-0.380294 0.506941,-0.41275 -0.02822,-0.03351 -0.19544,-0.01976 -0.32879,3.44e-4 -0.572558,0.0889 -1.053745,-0.431447 -1.19521,-0.656166 -0.04727,-0.0755 -0.0011,1.274233 0.591257,1.274233 z m -2.662765,-3.037064 c 0.422979,0.01376 0.90311,0.152047 1.271762,-0.5842 0.240242,-0.479425 -0.301977,-1.166283 -0.76482,-0.761294 -0.235305,0.206375 0.01622,0.559858 0.23636,0.435327 0.03281,-0.0187 0.07444,-0.08925 0.06597,-0.02258 -0.01939,0.169687 -0.167216,0.143228 -0.180268,0.174625 -0.0021,0.0042 -0.0013,0.01058 0.0032,0.01799 0.104068,0.180623 0.252235,-0.0441 0.231068,0.02893 -0.08643,0.294217 -0.489653,0.07549 -0.917926,0.372181 -0.331259,0.230717 -0.50024,0.523169 -0.46214,0.502355 0.214841,-0.114652 0.412398,-0.167216 0.516821,-0.163336 z m 4.00332,3.037064 c 3.020838,-0.0018 1.901825,-1.972733 1.093613,-1.486253 -0.425804,0.256117 -0.190854,0.713317 0.179562,0.561975 0.05574,-0.02293 0.143934,-0.110772 0.107247,-0.02681 -0.09419,0.2159 -0.30198,0.177094 -0.333023,0.216958 -0.0049,0.006 -0.0049,0.01341 -0.0021,0.02293 0.08396,0.233186 0.388408,-0.04868 0.328083,0.04445 -0.340783,0.530225 -3.539418,0.66675 -1.373365,0.66675 z m 1.989469,0.276932 h -5.654477 c 0.09984,0.103717 0.148873,0.25012 0.06915,0.368653 l 5.585331,-0.01996 v -0.348692 z m -16.532462,0 h 5.619833 c -0.09913,0.103717 -0.148166,0.25012 -0.06879,0.368653 h -5.551043 z m 7.13819,0.797279 c -0.329848,0.329495 -0.179565,0.925689 -1.437217,0.944034 -0.684038,0.0099 -1.23684,-0.657225 -0.534813,-0.864659 0.358423,-0.10548 0.656521,0.216253 0.402521,0.340078 -0.03775,0.01834 -0.140054,0.02469 -0.05856,0.04233 0.211667,0.04692 0.250122,-0.0762 0.294217,-0.07514 0.0067,3.44e-4 0.01304,0.0035 0.01939,0.0092 0.164394,0.145345 -0.173567,0.178153 -0.07585,0.188031 0.493535,0.05151 0.2794,-0.559506 1.467556,-0.720372 0.280811,-0.03845 0.01024,0.05009 -0.07726,0.136525 v 0" />
+                            </g>
+                        </g>
+                    </g>
+                </svg><svg class="line-extend" width="3.0082247mm" height="8.6931553mm" viewBox="0 0 3.0082247 8.6931553" preserveAspectRatio="none">
+
+                    <rect id="rect8" width="3.0217001" height="0.368653" x="-0.0016682709" y="5.8469343" style="stroke-width:0.2656554" />
+                </svg><svg width="7.7959099mm" height="8.6931572mm" viewBox="0 0 7.7959098 8.6931572" preserveAspectRatio="none">
+
+                    <g transform="translate(111.80514,18.798955)">
+                        <path d="m -108.88022,-12.767887 c 0.0123,-0.44062 0.34961,-0.81139 0.21661,-1.17933 -0.06,-0.16546 -0.42969,-0.3101 -0.53234,0.018 -0.0882,0.28222 0.1404,0.33196 0.13899,1.16134 0.001,0.83009 -0.22719,0.87947 -0.13899,1.16134 0.10265,0.32879 0.47237,0.1838 0.53234,0.0183 0.133,-0.36759 -0.20426,-0.73836 -0.21661,-1.17968 z m 1.149,0.33161 c 1.11337,0 1.48555,1.06751 1.2005,1.53423 -0.27411,0.44874 -0.58279,0.32809 -1.16275,0.35666 -0.37959,0.0191 -0.62124,0.26847 -0.61595,0.19368 0.0381,-0.54434 0.63606,-0.61419 0.88194,-0.95356 0.508,-0.70274 -0.74118,-0.93204 -0.85266,-0.70944 -0.0734,0.1464 -0.7867,-0.42157 0.54892,-0.42157 z m 0,-0.66322 c 1.11337,0 1.48555,-1.06715 1.2005,-1.53423 -0.27411,-0.44873 -0.58279,-0.32738 -1.16275,-0.35666 -0.37959,-0.0183 -0.62124,-0.26811 -0.61595,-0.19332 0.0381,0.54469 0.63606,0.61383 0.88194,0.95356 0.508,0.70203 -0.74118,0.93168 -0.85266,0.70979 -0.0734,-0.14711 -0.7867,0.42086 0.54892,0.42086 z m -0.92957,0.0254 c -0.0441,0.0501 -0.0716,0.17533 -0.0755,0.30621 0.004,0.13124 0.0314,0.25612 0.0755,0.30657 0.0529,0.0596 0.62442,-0.37783 1.51553,-0.16122 0.48719,0.11782 0.70944,0.47307 1.12854,0.64417 0.5588,0.22895 1.19627,-0.30022 0.89323,-0.30022 -0.24306,0 -0.23636,-0.18591 -0.0843,-0.12805 0.63182,0.23777 0.86819,-0.19791 1.17087,-0.33303 0.0173,-0.007 0.0258,-0.0166 0.0272,-0.0282 -0.001,-0.0113 -0.01,-0.0205 -0.0272,-0.0286 -0.30268,-0.1344 -0.53905,-0.57009 -1.17087,-0.33231 -0.15205,0.0571 -0.15875,-0.12841 0.0843,-0.12841 0.30304,0 -0.33443,-0.52917 -0.89323,-0.29987 -0.4191,0.17145 -0.64135,0.526 -1.12854,0.64382 -0.89111,0.21661 -1.46261,-0.22083 -1.51553,-0.16086 z m -1.58044,0.63782 c -2.19534,7.2e-4 -1.38148,1.43334 -0.79411,1.08021 0.30939,-0.18697 0.13829,-0.51894 -0.13088,-0.40852 -0.0406,0.0162 -0.10407,0.0801 -0.0776,0.0194 0.0677,-0.15663 0.21908,-0.12912 0.24165,-0.15804 0.004,-0.004 0.004,-0.01 0.002,-0.0162 -0.061,-0.17004 -0.28222,0.0349 -0.23812,-0.0332 0.2473,-0.38488 2.5721,-0.48366 0.99731,-0.48366 z m 0,-0.66322 c -2.19534,-3.4e-4 -1.38148,-1.43298 -0.79411,-1.07915 0.30939,0.18556 0.13829,0.51753 -0.13017,0.40746 -0.0413,-0.0162 -0.10478,-0.0801 -0.0783,-0.0191 0.0677,0.15734 0.21908,0.12877 0.24165,0.15805 0.004,0.004 0.004,0.01 0.002,0.0159 -0.061,0.17039 -0.28222,-0.0349 -0.23812,0.0328 0.2473,0.38594 2.5721,0.48471 0.99731,0.48401 z m 0.83255,0.9906 c -0.26811,0.19332 -0.75247,0.10548 -0.76694,0.84102 -0.008,0.3997 0.5334,0.72355 0.70203,0.31221 0.0861,-0.2092 -0.17462,-0.38312 -0.27587,-0.23495 -0.0152,0.0222 -0.0201,0.0818 -0.0346,0.0339 -0.0385,-0.12347 0.0624,-0.1464 0.0607,-0.17215 0,-0.004 -0.002,-0.007 -0.007,-0.0113 -0.11818,-0.0963 -0.14428,0.1016 -0.1524,0.0444 -0.0423,-0.28928 0.45403,-0.16263 0.58562,-0.85867 0.0303,-0.16404 -0.0416,-0.005 -0.11148,0.0455 z m 0.17498,-0.47449 h -2.57193 l 0.007,-0.36865 h 2.56515 c 0.0159,0.11289 0.0131,0.29351 0,0.36865 z m -0.17498,-0.84313 c -0.26811,-0.19368 -0.75247,-0.10548 -0.76694,-0.84103 -0.008,-0.40005 0.5334,-0.72354 0.70203,-0.31256 0.0861,0.20955 -0.17462,0.38382 -0.27587,0.23601 -0.0152,-0.0226 -0.0201,-0.0829 -0.0346,-0.0346 -0.0385,0.12312 0.0624,0.1464 0.0607,0.17216 0,0.003 -0.002,0.007 -0.007,0.0113 -0.11818,0.0963 -0.14428,-0.1016 -0.1524,-0.0444 -0.0423,0.28892 0.45403,0.16333 0.58562,0.85866 0.0303,0.16369 -0.0416,0.005 -0.11148,-0.0455 z" sodipodi:nodetypes="ccccccccscccccsscccccscccccscccccscccccccccccccccccccccccccccccccccccccccccacccccccc" />
+                    </g>
+                </svg>
+            </div>
+            <!-- -->
+            <small>Contato
+                <a href="https://discord.gg/rvPSvx" style="vertical-align: middle"><svg viewBox="0 0 24 24" fill="#fff" style="width: 2em;height: 2em">
+                        <path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273l-1.47-1.338l-1.604-1.398l.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537c-1.336-.668-2.54-1.002-3.744-1.137c-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735c-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02c0 0 1 1.74 3.743 1.806c0 0 .4-.533.805-1.002c-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03c.33.136.66.27.93.4a8.18 8.18 0 0 0 1.8.536c.93.135 1.996.2 3.21 0c.6-.135 1.2-.267 1.8-.535c.39-.2.87-.4 1.397-.737c0 0-.6.936-2.205 1.404c.33.466.795 1 .795 1c2.744-.06 3.81-1.8 3.87-1.726c0-3.87-1.815-7.02-1.815-7.02c-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335c0 .74-.57 1.34-1.27 1.34c-.7 0-1.27-.6-1.27-1.334c.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335c0 .74-.57 1.34-1.27 1.34c-.7 0-1.27-.6-1.27-1.334c0-.74.57-1.338 1.27-1.338z" /></svg></a></small>
+            <br>
+            "<small id="quot" class=""></small>"
+        </footer>
+    </div>
+    <script src="js/main.js" defer></script>
+</body></html>
