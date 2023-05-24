@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Import Text Files</title>
+</head>
+<body>
+  <div id="textContainer"></div>
+
+  <script>
+    function importTextFiles() {
+      var fileNames = ['file1.txt', 'file2.txt', 'file3.txt'];
+
+      fileNames.forEach(function(fileName) {
+        var textContainer = document.getElementById('textContainer');
+
+        // Using <iframe>:
+        var iframe = document.createElement('iframe');
+        iframe.src = fileName;
+        textContainer.appendChild(iframe);
+
+        // Using <object>:
+        var object = document.createElement('object');
+        object.data = fileName;
+        textContainer.appendChild(object);
+
+        // Using <embed>:
+        var embed = document.createElement('embed');
+        embed.src = fileName;
+        textContainer.appendChild(embed);
+      });
+    }
+
+    // Call the function to import the text files
+    importTextFiles();
+  </script>
+</body>
+</html>

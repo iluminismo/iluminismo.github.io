@@ -124,6 +124,21 @@ function loadCategory(category) {
   }
 }
 
+var nav = ["Home", "", "", "", ""];
+
+function loadNav() {
+  for (let i = 0; i < nav.length; i++) {
+    const e = nav[i];
+    var tab =
+      '<a class="p-2 text-muted" href="#" onclick="toggleElements(event, ' +
+      i +
+      ')">' +
+      e[i] +
+      "</a>";
+    $("#nav").append(tab);
+  }
+}
+loadNav();
 function toggleElements(event, id) {
   event.preventDefault(); // Prevent any default behavior of the event
 
