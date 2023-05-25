@@ -13,20 +13,10 @@
       fileNames.forEach(function(fileName) {
         var textContainer = document.getElementById('textContainer');
 
-        // Using <iframe>:
-        var iframe = document.createElement('iframe');
-        iframe.src = fileName;
-        textContainer.appendChild(iframe);
-
-        // Using <object>:
         var object = document.createElement('object');
         object.data = fileName;
         textContainer.appendChild(object);
 
-        // Using <embed>:
-        var embed = document.createElement('embed');
-        embed.src = fileName;
-        textContainer.appendChild(embed);
       });
     }
 

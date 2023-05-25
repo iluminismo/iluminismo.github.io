@@ -2,32 +2,29 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="text-center col-12">
-        <a class="logo text-dark" href="#">Tech Arcade</a>
+        <a class="logo text-dark" href="#">Iluminismo</a>
       </div>
     </div>
   </header>
 
   <div class="nav-scroller py-1 mb-2">
-    <nav class="nav d-flex justify-content-between" id="nav"></nav>
+    <nav class="nav d-flex justify-content-between" id="menu">
+      <a class="p-2 text-muted" href="#home">Home</a>
+    </nav>
   </div>
-</div>
-<div class="container" id="home">
-  <div class="row mb-2" id="featured"></div>
-  <div class="row mb-2" id="highlight"></div>
-
-  <div class="row mb-2" id="posts"></div>
 </div>
 
 <div class="container" id="category">
-  <div class="row mb-2" id="category-posts"></div>
-</div>
-
-<div class="album py-5 bg-light" id="page">
-  <div class="container">
-    <div class="col-12" id="content"></div>
+  <div id="folder" class="tab-folder">
+    <div id="home" class="tab-content">
+      <div class="row mb-2 featured"></div>
+      <div class="row mb-2 highlight"></div>
+      <div class="row mb-2 postList"></div>
+    </div>
   </div>
 </div>
 
+<div id="textContainer"></div>
 <footer class="blog-footer">
   <p>
     <a href="#">Back to top</a>

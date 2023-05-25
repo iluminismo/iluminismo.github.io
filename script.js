@@ -1,38 +1,56 @@
+// ########################################################
+//   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
+// ########################################################
+
 $("#app").load("/template/nav.html");
 
-function getTextFilesFromFolder() {
-  var currentIndex = 0;
-  var textFiles = [];
-  var path =
-    "https://raw.githubusercontent.com/TechArcade/techarcade.github.io/main/posts/";
-  function fetchTxtFile(index) {
-    var url = path + index + ".txt";
+function importTextFiles(callback) {
+  var max = 5;
+  var fileContents = [];
+  var fileIndex = 0;
+  importTextFiles();
+  // make it create all objects of a page then check load and retreave the info
+  console.log(fileContents);
+  function importTextFiles() {
+    var fileName = "/posts/" + fileIndex + ".txt";
 
-    $.ajax({
-      url: url,
-      type: "GET",
-      success: function (data) {
-        textFiles.push(data);
-        // Fetch the next file
-        fetchTxtFile(index + 1);
-      },
-      error: function (xhr) {
-        if (xhr.status === 404) {
-          // No more files found, do something with txtFiles
-          postList = extractHTMLInfo(textFiles);
-          console.log(postList);
-          Featured(postList[0]);
-          Highlight(postList[1]);
-          Highlight(postList[2]);
-          loadPosts(postList);
-        }
-      },
-    });
+    var object = document.createElement("object");
+    object.data = fileName;
+    document.body.appendChild(object);
+
+    object.onload = function () {
+      var fileContent = object.contentDocument.body.innerText.trim();
+
+      // Continue importing files if the file exists
+      if (fileContent !== "") {
+        fileContents.push(fileContent);
+        fileIndex++;
+      } else {
+        // Output the list of file contents
+        console.log("error");
+      }
+      object.remove();
+      console.log(fileIndex);
+      if (fileIndex < max) {
+        importTextFiles();
+      } else {
+        loadNav();
+
+        postList = extractHTMLInfo(fileContents);
+        console.log(postList);
+        Featured("#home", postList[0]);
+        Highlight("#home", postList[1]);
+        Highlight("#home", postList[2]);
+        loadPostsCard("#home", postList);
+        loadPosts(postList);
+
+        loadCategorys();
+      }
+    };
   }
-
-  // Start fetching the first file
-  fetchTxtFile(currentIndex);
 }
+// Call the function to import the text files
+importTextFiles();
 
 function extractHTMLInfo(htmlList) {
   const infoList = [];
@@ -59,11 +77,22 @@ function extractHTMLInfo(htmlList) {
 
   return infoList;
 }
+
 var postList = [];
-function loadPosts(list) {
+function loadPostsCard(id, list) {
   for (let i = 3; i < list.length; i++) {
     const e = list[i];
-    $("#posts").append(Post(e));
+    $(id + " .postList").append(Post(e));
+  }
+}
+
+function loadPosts(list) {
+  for (let i = 0; i < list.length; i++) {
+    const e = list[i];
+    const page =
+      '<div id="page' + i + '" class="tab-content">' + e.content + "</div>";
+
+    $(page).insertBefore("#home");
   }
 }
 
@@ -77,27 +106,29 @@ function Post(e) {
     e.resume +
     '</p><div class="d-flex justify-content-between align-items-center"><div  class="text-white font-weight-bold">Continue reading...</div> <small class="text-muted">' +
     e.category +
-    '</small></div></div><div onclick="toggleElements(event, ' +
+    '</small></div></div><a href="#page' +
     e.id +
-    ')"  class="post-link"></div></div></div>';
+    '" class="post-link"></a></div></div>';
   return post;
 }
-function Featured(e) {
+
+function Featured(id, e) {
   const template =
     '<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" style="background-image: url(' +
     e.img +
-    '); background-repeat: no-repeat;    background-size: cover;background-position: center;">  <div class="col-md-6 px-0 featured" onclick="toggleElements(event, ' +
+    '); background-repeat: no-repeat;    background-size: cover;background-position: center;">  <a href="#page' +
     e.id +
-    ')">    <h1 class="display-4 font-italic">' +
+    '" class="link-nul"><div class="col-md-6 px-0 featured-card">    <h1 class="display-4 font-italic">' +
     e.title +
     '</h1>    <p class="lead my-3 resume">' +
     e.resume +
     '</p>    <p class="lead mb-0">      <a  class="text-white font-weight-bold">Continue reading...</a>   <small class="text-muted">' +
     e.category +
-    "</small> </p>  </div></div>";
-  $("#featured").append(template);
+    "</small> </p>  </div></div></a>";
+  $(id + " .featured").append(template);
 }
-function Highlight(e) {
+
+function Highlight(id, e) {
   const template =
     '<div class="col-md-6 ">  <div class="card flex-md-row mb-4 box-shadow h-md-250 ">    <div class="card-body d-flex flex-column align-items-start">      <strong class="d-inline-block mb-2 text-primary">' +
     e.category +
@@ -107,138 +138,51 @@ function Highlight(e) {
     e.resume +
     '</p>      <a >Continue reading</a>    </div>    <img      class="card-img-right flex-auto d-none d-md-block"      data-src="holder.js/200x250?theme=thumb"      alt="Thumbnail [200x250]"      style="width: 200px; height: 250px"      src="' +
     e.img +
-    '"      data-holder-rendered="true"    /><div onclick="toggleElements(event, ' +
+    '"      data-holder-rendered="true"    /><a href="#page' +
     e.id +
-    ')"  class="post-link"></div>  </div></div>';
-  $("#highlight").append(template);
+    '" class="post-link"></a>  </div></div>';
+  $(id + " .highlight").append(template);
 }
-getTextFilesFromFolder();
 
-function loadCategory(category) {
-  $("#category-posts").html("");
+function loadCategoryCards(category) {
+  var newList = [];
   for (let i = 0; i < postList.length; i++) {
     const e = postList[i];
     if (category == e.category) {
-      $("#category-posts").append(Post(e));
+      newList.push(e);
     }
+  }
+  if (newList.length >= 1) {
+    Featured("#" + category, newList[0]);
+  } else if (newList.length >= 3) {
+    Highlight("#" + category, newList[1]);
+    Highlight("#" + category, newList[2]);
+  } else if (newList.length > 3) {
+    loadPostsCard("#" + category, postList);
   }
 }
 
-var nav = ["Home", "", "", "", ""];
+function loadCategorys() {
+  $("#category-posts").html("");
 
+  for (let i = 0; i < nav.length; i++) {
+    const e = nav[i];
+    const template =
+      '<div id="' +
+      e +
+      '" class="tab-content">    <div class="row mb-2 featured"></div>    <div class="row mb-2 highlight"></div>    <div class="row mb-2 postList"></div>  </div>';
+
+    $(template).insertBefore("#home");
+
+    loadCategoryCards(e);
+  }
+}
+const nav = ["Art", "Books", "Legends", "Ideas"];
 function loadNav() {
   for (let i = 0; i < nav.length; i++) {
     const e = nav[i];
-    var tab =
-      '<a class="p-2 text-muted" href="#" onclick="toggleElements(event, ' +
-      i +
-      ')">' +
-      e[i] +
-      "</a>";
-    $("#nav").append(tab);
+
+    const tab = '<a class="p-2 text-muted" href="#' + e + '" >' + e + "</a>";
+    $("#menu").append(tab);
   }
 }
-loadNav();
-function toggleElements(event, id) {
-  event.preventDefault(); // Prevent any default behavior of the event
-
-  const homeElement = document.getElementById("home");
-
-  const category = document.getElementById("category");
-  const categoryPosts = document.getElementById("category-posts");
-
-  const pageElement = document.getElementById("page");
-  const pageContent = document.getElementById("content");
-
-  if (id === -1) {
-    close();
-    homeElement.style.display = "block"; // Show the home element
-  } else if (id === -2) {
-    close();
-    loadCategory("Ideas");
-    category.style.display = "block"; // Hide the page element
-  } else if (id === -3) {
-    close();
-    loadCategory("Games");
-    category.style.display = "block"; // Hide the page element
-  } else if (id === -4) {
-    close();
-    loadCategory("Tech");
-    category.style.display = "block"; // Hide the page element
-  } else {
-    console.log(id);
-    pageContent.innerHTML = postList[id].content;
-    close();
-    pageElement.style.display = "block"; // Show the page element
-  }
-
-  function close() {
-    homeElement.style.display = "none";
-    category.style.display = "none";
-    pageElement.style.display = "none";
-  }
-}
-
-/*
-function getTextFilesFromFolder() {
-  const folderPath = "/posts/";
-  const textFiles = [];
-  const q = 5;
-  for (let i = 0; i < q; i++) {
-    const href =
-      "https://raw.githubusercontent.com/TechArcade/techarcade.github.io/main/posts/" +
-      i +
-      ".txt";
-    if (href.endsWith(".txt")) {
-      const filePath = href;
-      console.log(href);
-      // Fetch the text file
-      $.get(filePath, function (text) {
-        textFiles.push(text);
-
-        if (i == q - 1) {
-          postList = extractHTMLInfo(textFiles);
-          console.log(postList);
-          Featured(postList[0]);
-          Highlight(postList[1]);
-          Highlight(postList[2]);
-          loadPosts(postList);
-        }
-      });
-    }
-  }
-
-  /*
-  $.ajax({
-    url: folderPath,
-    success: function (data) {
-      const links = $(data).find("a");
-      const q = links.length;
-      $(links).each(function (i) {
-        const href = $(this).attr("href");
-        if (href.endsWith(".txt")) {
-          const filePath = href;
-
-          // Fetch the text file
-          $.get(filePath, function (text) {
-            textFiles.push(text);
-
-            if (i == q - 1) {
-              postList = extractHTMLInfo(textFiles);
-              console.log(postList);
-              Featured(postList[0]);
-              Highlight(postList[1]);
-              Highlight(postList[2]);
-              loadPosts(postList);
-            }
-          });
-        }
-      });
-    },
-    error: function (error) {
-      console.error("Error loading folder:", error);
-    },
-  });
-
-  return textFiles;
-}*/
