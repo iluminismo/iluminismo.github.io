@@ -8,46 +8,55 @@ function importTextFiles(callback) {
   var max = 26;
   var fileContents = [];
   var fileIndex = 0;
-  importTextFiles();
-  // make it create all objects of a page then check load and retreave the info
-  console.log(fileContents);
-  function importTextFiles() {
-    var fileName = "/posts/" + fileIndex + ".txt";
+  function importTextFile(index) {
+    return new Promise(function (resolve, reject) {
+      var fileName = "/posts/" + index + ".txt";
+      var object = document.createElement("object");
+      object.data = fileName;
 
-    var object = document.createElement("object");
-    object.data = fileName;
-    document.body.appendChild(object);
+      object.onload = function () {
+        var fileContent = object.contentDocument.body.innerText.trim();
+        object.onload = null;
+        object.remove();
 
-    object.onload = function () {
-      var fileContent = object.contentDocument.body.innerText.trim();
+        // Check if the file exists
+        if (fileContent !== "") {
+          resolve(fileContent);
+        } else {
+          reject(new Error("File not found"));
+        }
+      };
 
-      // Continue importing files if the file exists
-      if (fileContent !== "") {
-        fileContents.push(fileContent);
-        fileIndex++;
-      } else {
-        // Output the list of file contents
-        console.log("error");
-      }
-      object.remove();
-      console.log(fileIndex);
-      if (fileIndex < max) {
-        importTextFiles();
-      } else {
-        loadNav();
-
-        postList = extractHTMLInfo(fileContents);
-        console.log(postList);
-        Featured("#home", postList[0]);
-        Highlight("#home", postList[1]);
-        Highlight("#home", postList[2]);
-        loadPostsCard("#home", postList);
-        loadPosts(postList);
-
-        loadCategorys();
-      }
-    };
+      document.body.appendChild(object);
+    });
   }
+
+  var promises = [];
+  for (var i = 0; i < max; i++) {
+    promises.push(importTextFile(i));
+  }
+
+  Promise.all(promises)
+    .then(function (fileContents) {
+      // All files loaded successfully
+      console.log(fileContents);
+      // Call the callback or continue processing here
+      // if needed
+
+      postList = extractHTMLInfo(fileContents);
+      console.log(postList);
+      Featured("#home", postList[0]);
+      Highlight("#home", postList[1]);
+      Highlight("#home", postList[2]);
+      loadPostsCard("#home", postList);
+      loadPosts(postList);
+      loadNav();
+      loadCategorys();
+    })
+    .catch(function (error) {
+      // Handle the error if any file fails to load
+      console.error(error);
+    });
 }
 // Call the function to import the text files
 importTextFiles();
