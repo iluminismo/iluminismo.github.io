@@ -5,7 +5,7 @@
 $("#app").load("/template/nav.html");
 
 function importTextFiles(callback) {
-  var max = 5;
+  var max = 25;
   var fileContents = [];
   var fileIndex = 0;
   importTextFiles();
