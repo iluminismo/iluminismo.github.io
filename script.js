@@ -5,7 +5,7 @@
 $("#app").load("/template/nav.html");
 
 function importTextFiles(callback) {
-  var max = 25;
+  var max = 26;
   var fileContents = [];
   var fileIndex = 0;
   importTextFiles();
@@ -152,13 +152,18 @@ function loadCategoryCards(category) {
       newList.push(e);
     }
   }
+  console.log(newList);
   if (newList.length >= 1) {
     Featured("#" + category, newList[0]);
-  } else if (newList.length >= 3) {
+  }
+  if (newList.length >= 2) {
     Highlight("#" + category, newList[1]);
+  }
+  if (newList.length >= 3) {
     Highlight("#" + category, newList[2]);
-  } else if (newList.length > 3) {
-    loadPostsCard("#" + category, postList);
+  }
+  if (newList.length > 3) {
+    loadPostsCard("#" + category, newList);
   }
 }
 
